@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        html,
+        body,
+        header,
+        .view {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+    </style>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+   {% include 'user_home/navbar_after_login.html'%}
+    {% block content %}
+    <div class="container-fluid mt-3">
+        <div class="text-center">
+            <img src="static/images/cartoon.png" class="rounded-lg" height="200">
+        </div>
+        <div class="text-center">
+            <h1 class="text-success">Welcome,{{user}}</h1>
+            <h3 class="text-muted lead">+919898989898</h1>
+                <h3 class="text-muted lead">{{user.email}}</h1>
+                    <a href='' type="button" class="btn shadow-sm btn-outline-info mt-3"><span class="material-icons">
+                            create
+                        </span></a>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <h2 class="lead text-uppercase text-center mt-4"><i class="material-icons mr-2 md-24">construction</i>Summary of
+            your hardwork!<i class="material-icons ml-2 md-24">construction</i></h2>
+        <div class="card-deck mt-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <i class="material-icons md-48">money</i>
+                    <h5 class="card-title font-weight-bold">Expenses</h5>
+                    <p class="card-text lead">Voila! This month you are well in control of the expenses.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow">
+                <div class="card-body">
+                    <i class="material-icons md-48">account_balance_wallet</i>
+                    <h5 class="card-title font-weight-bold">Savings</h5>
+                    <p class="card-text lead">As you have controlled your expenses this month, so your Savings also
+                        increase by 23% by last compared.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow">
+                <div class="card-body">
+                    <i class="material-icons md-48">nature_people</i>
+                    <h5 class="card-title font-weight-bold">Investment</h5>
+                    <p class="card-text lead">Okay, so here's the truth, that saved money ain't gonna get increased
+                        without investment. You need to invest your money.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container my-5" id="contact">
+
+            <style>
+                .border-top {
+                    border-top: 5px solid #ffac75 !important;
+                    border-top-left-radius: .25rem !important;
+                    border-top-right-radius: .25rem !important;
+                }
+            </style>
+            <section class="text-center dark-grey-text mb-5">
+
+                <div class="card">
+                    <div class="card-body rounded-top border-top p-5">
+
+                    
+                        <h3 class="font-weight-bold my-4">We would love to hear from you!<i class="material-icons ml-2" style="color:red;font-size: 40px;">favorite</i></h3>
+                        
+                        <p class="font-weight-light mx-auto mb-4 p-2">We would love to solve your query<br>
+                            Shoot the query below</p>
+
+                        <form class="mb-4 mx-md-5" action="">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    
+                                    <input type="text" id="name" class="form-control" placeholder="Name">
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <!-- Email -->
+                                    <input type="email" id="email" class="form-control" placeholder="Email">
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+
+                                    <!-- Subject -->
+                                    <input type="text" id="subject" class="form-control" placeholder="Subject">
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="form-group mb-4">
+                                        <textarea class="form-control rounded" id="message" rows="3"
+                                            placeholder="How can we help?"></textarea>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-info btn-md">Submit</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </section>
+
+    {% endblock %}
+    
+        </div>
+           {% include 'user_home/footer.html'%}
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+<html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <style>
+    /* GLOBAL STYLES
+-------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      color: #5a5a5a;
+    }
+
+
+    /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 45em;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 46rem;
+    }
+
+
+    /* MARKETING CONTENT
+-------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+
+    /* Featurettes
+------------------------- */
+
+    .featurette-divider {
+      margin: 5rem 0;
+      /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+
+    /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+    @media (min-width: 40em) {
+
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+  </style>
+  {% load static %}
+
+  <link href="../assets/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gradient-info">
+  {% include 'user_home/navbar_after_login.html'%}
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="first-slide" src="static/images/graphss.png" alt="First slide">
+        <div class="container">
+          <div class="carousel-caption text-dark">
+            <h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+              metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-rounded shadow-sm btn-outline-success" href="/blog1" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="second-slide" src="static/images/investing.png" alt="Second slide">
+        <div class="container">
+          <div class="carousel-caption text-dark">
+            <h1 class="pt-5">Today's Financial market</h1>
+            <p>Crash due to rise in COVID-19 cases</p>
+            <p><a class="btn btn-rounded shadow-sm btn-outline-info" href="/blog2" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="third-slide" src="static/images/credit.png" alt="Third slide">
+        <div class="container">
+          <div class="carousel-caption text-dark">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+              metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-rounded shadow-sm btn-outline-warning" href="/blog3" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading ml-5">Adani Stocks plunge amid <span class="text-muted">twitter storm by Sucheta
+          Dalal</span></h2>
+      <p class="lead ml-5 mt-3">The Adani group saw plunge in wealth amidst ongoing crisis pointing towards its
+        expansion and overtaking of shipping ports</p>
+      <p><a class="btn btn-outline-success ml-5" href="/blog1" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid " height="600" width="600" src="static/images/scam.png"
+        alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading ml-5">Rakesh Jhunjhunwala portfolio : <span class="text-muted">Stocks to look out
+          for</span></h2>
+      <p class="lead ml-5 mt-3">A stock from Ace indian investor Rakesh Jhunjhunwala potfolio which can give massive returns </p>
+      <p><a class="btn btn-outline-success ml-5" href="/blog2" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img class="featurette-image img-fluid " height="500" width="500" src="static/images/resrarch.png"
+        alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading ml-5">Confused between mutual funds vs stocks? <span class="text-muted">Here are the
+          reasons to consider mutual funds over stock</span></h2>
+      <p class="lead ml-5">Every expert was once a beginner. Want to start investing? Start with these fundamentals and
+        follow them to <strong>START</strong> your investing journey</p>
+      <p><a class="btn btn-outline-success ml-5" href="/blog3" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid " src="static/images/expense1.png" height="500" width="500"
+        alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <div id="contact">
+    <div class="container z-depth-1 my-5 px-0">
+
+
+      <section class="p-5 my-md-5 text-center"
+        style="background-image: url(static/images/resrarch.png); background-size: cover; ">
+
+        <!-- Section heading -->
+        <h3 class="text-center font-weight-bold mt-5 mb-3">Subscribe to our newsletter</h3>
+        <!-- Section description -->
+        <h4 class="text-center font-weight-normal  mx-auto mb-4 pb-2">Delivered straight to your mail!</h4>
+
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+          action="https://script.google.com/macros/s/AKfycbxyfIrWe6MZpN8tcK3EIYmitzzRKJAYR6lbQ1PrVeY6F-73wkHx/exec">
+
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <input type="text" id="name" name="name" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-md-4 mb-4">
+              <input type="text" id="email" name="email" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="col-md-4 mb-4">
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone (optional)">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mb-4">
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12 mb-4">
+            <input id="email" class="form-control" name="email" type="email" value="" required placeholder="example@xyz.com" />
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group mb-4">
+                <textarea class="form-control rounded" id="message" name="message" rows="3"
+                  placeholder="How can we help?"></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+
+  
+  <div class="container marketing">
+    <div class="mb-3">
+      <h1 class="featurette-heading">Authors!</h1>
+    </div>
+    <hr>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="static/images/AB1.png" alt="Generic placeholder image" class="img-fluid">
+        <h3 class=" featurette-heading mt-3 mb-4">Abhinay</h3>
+        <p>Avid techie, Cricket Enthusiast and financial follower</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="img-fluid mt-1" src="static/images/montu.jpg" alt="Generic placeholder image">
+        <h3 class=" featurette-heading mt-3 mb-4">Montukeshwar</h3>
+        <p>Avid techie, Cricket Enthusiast and financial follower</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="static/images/har.jpg" alt="Generic placeholder image" class="img-fluid">
+        <h3 class=" featurette-heading mt-3 mb-4">Harshit</h3>
+        <p>Avid techie, Cricket Enthusiast and financial follower</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+
+
+    {% include 'user_home/footer.html'%}
+</body>
+
+</html>

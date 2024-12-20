@@ -1,0 +1,151 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% include 'user_home/navbar_after_login.html'%}
+ {% block title %} Dashboard {% endblock title %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<script src="{% static 'js/submit.js' %}"></script>
+<script src="{% static 'js/filter.js' %}"></script>
+{% endblock head %} {% block body %}
+
+<div class="container-fluid">
+    {% include 'expense_manager/nav_bar.html' %}
+    <div class="row">
+        <div class="col-md-12 shadow" style="background-color: white;">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade p-15" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+                    {% include 'expense_manager/dashboard/dashboard_tab_content.html' %}
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                
+                <a class="nav-link" id="v-pills-all-expenses-tab" data-toggle="pill" href="#v-pills-all-expenses" role="tab" aria-controls="v-pills-all-expenses"
+                    aria-selected="false">All expenses</a>
+                <!-- <a class="`elected="false">Contact Support</a> -->
+            </div>
+
+                </div>
+                <div class="tab-pane fade p-15" id="v-pills-all-expenses" role="tabpanel" aria-labelledby="v-pills-all-expenses-tab">
+                    {% include 'expense_manager/dashboard/expense_list.html' with expenses=all_expenses footer=True %}
+                </div>
+                <!-- <div class="tab-pane fade p-15" id="v-pills-report" role="tabpanel" aria-labelledby="v-pills-report-tab">
+                    {% include 'expense_manager/dashboard/report_tab_content.html' %}
+                </div>
+                <div class="tab-pane fade p-15" id="v-pills-analytics" role="tabpanel" aria-labelledby="v-pills-analytics-tab">
+                        {% include 'expense_manager/dashboard/analytics_tab_content.html' %}
+                </div>
+                <div class="tab-pane fade p-15" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
+                    {% include 'expense_manager/dashboard/contact_support_tab_content.html' %}
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- add modal -->
+    {% include 'expense_manager/modal/add_edit.html' %}
+    <!-- image modal -->
+    {% include 'expense_manager/modal/image.html' %}
+    <!-- delete modal -->
+    {% include 'expense_manager/modal/delete.html' %}
+    <!-- complete modal -->
+    {% include 'expense_manager/modal/complete.html' %}
+</div>
+<div id="contact">
+        <div class="container z-depth-1 my-5 px-0">
+  
+  
+          <section class="p-5 my-md-5 text-center"
+            style="background-image: url(static/images/resrarch.png); background-size: cover; ">
+  
+            <!-- Section heading -->
+            <h3 class="text-center font-weight-bold mt-5 mb-3">Contact Us</h3>
+            <!-- Section description -->
+            <h4 class="text-center font-weight-normal  mx-auto mb-4 pb-2">We would love to hear from you!</h4>
+  
+            <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+              action="https://script.google.com/macros/s/AKfycbxyfIrWe6MZpN8tcK3EIYmitzzRKJAYR6lbQ1PrVeY6F-73wkHx/exec">
+  
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <input type="text" id="name" name="name" class="form-control" placeholder="First Name">
+                </div>
+                <div class="col-md-4 mb-4">
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Last Name">
+                </div>
+                <div class="col-md-4 mb-4">
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone (optional)">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-4">
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-md-12 mb-4">
+                <input id="email" class="form-control" name="email" type="email" value="" required placeholder="example@xyz.com" />
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group mb-4">
+                    <textarea class="form-control rounded" id="message" name="message" rows="3"
+                      placeholder="How can we help?"></textarea>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-info">Submit</button>
+                  </div>
+                </div>
+              </div>
+  
+            </form>
+  
+          </section>
+  
+  
+  
+        </div>
+      </div>
+  
+    {% include 'user_home/footer.html'%}
+<script>
+    $(function(e){
+        // change image filter text if image filter applied on refresh
+        if( {{ imagefilter }} == 3){
+            $('#imageFilter').text('Has Image')
+        }else if( {{ imagefilter }} == 2){
+            $('#imageFilter').text('No Image')
+        }else{
+            $('#imageFilter').text('Image Filter')
+        }
+        
+        // change date filter text if date filter applied on refresh
+        var datefilter = "{{ datefilter }}"
+        if( datefilter == 'today' ){
+            $('#dateFilter').text('Today')
+
+        }else if( datefilter  == 'this-week'){
+            $('#dateFilter').text('This Week')
+        }else if( datefilter  == 'previous-week'){
+            $('#dateFilter').text('Previous Week')
+        }else if( datefilter  == 'this-month'){
+            $('#dateFilter').text('This Month')
+        }else{
+            $('#dateFilter').text('Date Filter')
+        }
+
+        // show expense tab if parameter found
+        var show_expense_tab = {{ show_expense_tab|yesno:"true,false" }};
+        if (show_expense_tab){
+            $('#v-pills-all-expenses').addClass('show active')
+            $('#v-pills-all-expenses-tab').addClass('active')
+        }else{
+            $('#v-pills-dashboard').addClass('show active')
+            $('#v-pills-dashboard-tab').addClass('active')
+        }
+
+        
+    });
+    
+</script>
+
+
+{% endblock body %}

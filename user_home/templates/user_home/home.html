@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        html,
+        body,
+        header,
+        .view {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+    </style>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body class="bg-gradient-info">
+    {% include 'user_home/navbar_after_login.html'%}
+    {% block content %}
+    <div class="container my-5 ">
+
+
+
+
+        <div class="view lighten-3">
+            <div class="mask">
+                <div class="container h-100">
+
+                    <div class="row h-100">
+
+                        <div class="col-md-6">
+                            <h1 class="mt-1 text-warning">Welcome<span class="text-success ml-2">{{user}}!</span>
+                            </h1> <br>
+                            <h5 class="mb-4 pb-10 dark-grey-text">
+                                Want personalized financial consultancy for <span class="text-info">FREE?</span>
+
+                            </h5>
+                            <h5 class="mb-4 pb-10 dark-grey-text">
+                                Well then, Finler is the right match for you!
+                            </h5>
+                            <a href='#link' type="button"
+                                class="btn btn-light btn-rounded shadow-sm btn-outline-info">Get started</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="static/images/sugg.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </header>
+
+    <div id='link'>
+
+        <div class="container my-5 py-5 z-depth-1">
+
+
+
+            <section class="text-center px-md-5 mx-md-5 dark-grey-text">
+
+                <h1 class="font-weight-bold">Track your Expenses</h1>
+                <hr>
+
+
+                <div class="row d-flex justify-content-center">
+
+                    <img src="static/images/credit.png" height="500">
+
+
+
+                    <p class='lead'><b class='mr-2 font-weight-bold'>FINLER</b>lets you track your expenses with a
+                        personalized experienced with just linkage of your debit/credit card
+                        . Thus, allowing you to properly manage your funds and hence invest wisely.
+                    </p>
+                    <a href="http://localhost:3000/"><button type="button"  class="btn btn-warning">Debit card</button></a>
+                    <a href="http://localhost:3000/"><button type="button" class="btn btn-warning ml-1">Credit card</button></a>
+                </div>
+
+
+        </div>
+
+
+        </section>
+
+
+
+    </div>
+
+    </div>
+    <div id='features'>
+
+        <div class="container my-5 py-5 z-depth-1">
+
+
+
+            <section class="text-center px-md-5 mx-md-5 dark-grey-text">
+
+                <h1 class="font-weight-bold">What's other than
+                   
+                    <span class="material-icons" height="100">
+arrow_upward
+</span>
+                </h1>
+                <hr>
+
+
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 mb-md-0 mt-5">
+
+                        <h3 class="font-weight-bold">Easy-to-guide stats</h3>
+
+                        <p class="lead">Well formed statistics in form of graphs, suggesting all the positives and
+                            negatives of the expenditure which will inturn help in managing all the expenses for each
+                            and every month</p>
+
+                        <a class="btn btn-info btn-md ml-0" href="/expensetracker" role="button">Try it out!</a>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 mb-md-0">
+
+                        <!--Image-->
+                        <div class="view overlay z-depth-1-half">
+                            <img src="static/images/stats.png" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-light"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+                <div class="row mt-2">
+                    <div class="col-md-6 mb-4 mb-md-0">
+
+                        <!--Image-->
+                        <div class="view overlay z-depth-1-half">
+                            <img src="static/images/risk.png" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-light"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 mb-md-0 mt-5">
+
+                        <h3 class="font-weight-bold">Risk Calculator</h3>
+
+                        <p class="lead">You can even calculate your risks of spending extra pennies on something
+                            or to any investment with our risk calculator which will accurately tell you whether there
+                            will be profit or loss on the basis of various factors.</p>
+
+                        <a class="btn btn-warning btn-md ml-0" href="/emicalc" role="button">Calculate</a>
+
+                    </div>
+
+
+                </div>
+                <div class="row mt-2">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 mb-md-0 mt-5">
+
+                        <h3 class="font-weight-bold">P-I-O</h3>
+                        <p class="lead"><b>PERSONAL INVESTMENT OPPORTUNITY.</b></p>
+                        <p class="lead"> We as a tracking entity, also suggest good investments according to the amount
+                            of finance one can present, because money invested is money earned as it isn't going to
+                            increase sitting at home. We present to you ML-driven solutions to find you best investment
+                            opportunity into a
+                            specific sector.</p>
+
+                        <a class="btn btn-success btn-md ml-0" href="/blogs" role="button">Example</a>
+
+                    </div>
+                    <div class="col-md-6 mb-4 mb-md-0">
+
+                        <!--Image-->
+                        <div class="view overlay z-depth-1-half">
+                            <img src="static/images/investing.png" class="img-fluid" height="1000" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-light"></div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+        </div>
+
+    </div>
+
+    <div id="contact">
+      <div class="container z-depth-1 my-5 px-0">
+
+
+        <section class="p-5 my-md-5 text-center"
+          style="background-image: url(static/images/resrarch.png); background-size: cover; ">
+
+          <!-- Section heading -->
+          <h3 class="text-center font-weight-bold mt-5 mb-3">Contact Us</h3>
+          <!-- Section description -->
+          <h4 class="text-center font-weight-normal  mx-auto mb-4 pb-2">We would love to hear from you!</h4>
+
+          <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+            action="https://script.google.com/macros/s/AKfycbxyfIrWe6MZpN8tcK3EIYmitzzRKJAYR6lbQ1PrVeY6F-73wkHx/exec">
+
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <input type="text" id="name" name="name" class="form-control" placeholder="First Name">
+              </div>
+              <div class="col-md-4 mb-4">
+                <input type="text" id="email" name="email" class="form-control" placeholder="Last Name">
+              </div>
+              <div class="col-md-4 mb-4">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone (optional)">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 mb-4">
+              <input id="email" class="form-control" name="email" type="email" value="" required placeholder="example@xyz.com" />
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mb-4">
+                  <textarea class="form-control rounded" id="message" name="message" rows="3"
+                    placeholder="How can we help?"></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-info">Submit</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+        </section>
+
+
+
+      </div>
+    </div>
+
+    
+    {% endblock %}
+
+
+               {% include 'user_home/footer.html'%}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

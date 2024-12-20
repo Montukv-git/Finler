@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+    
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-light sticky-top topnav" style="background-color: rgb(253, 253, 253);">
+    <a href="/home" class="navbar-brand">
+        <img src="static/images/logo.png" height="50" alt="CoolBrand">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <div class="navbar-nav">
+            <a href="/home" class="nav-item nav-link">Home</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Bank Account
+                </a>
+                <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item d-inline-block" href="http://localhost:3000/">Add Bank Account
+                        <span class="mt-1">
+                            <i class="material-icons">add</i>
+                        </span>
+                    </a>
+
+                </div>
+            </li>
+
+
+            <a href="/expensetracker" class="nav-item nav-link ">Dashboard</a>
+            <a href="#contact" class="nav-item nav-link">Connect with us!</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Freebies!
+                </a>
+                <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item d-inline-block" href="/emicalc">Loan calculator</a>
+                  <hr class="dropdown-divider">
+                  <a class="dropdown-item" href="/blogs">Blogs</a>
+                </div>
+              </li>
+            
+        </div>
+
+        <div class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="static/images/cartoon.png" height="50" alt="CoolBrand">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right dropdown-dark"
+                        aria-labelledby="navbarDropdownMenuLink-55">
+                        <a class="dropdown-item" href="/profile">Profile</a>
+                        <a class="dropdown-item" href="/">Sign out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

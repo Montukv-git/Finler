@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    html,
+    body,
+    header,
+    .view {
+      scroll-behavior: smooth;
+      height: 100%;
+
+    }
+      
+  </style>
+  {% load static %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light sticky-top topnav">
+    <a href="#" class="navbar-brand">
+      <img src="static/images/logo.png" height="50" alt="CoolBrand">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <a href="/" class="nav-item nav-link active">Home</a>
+        <a href="#about" class="nav-item nav-link">About us</a>
+        <a href="#contact" class="nav-item nav-link">Contact us</a>
+        <a href="#features" class="nav-item nav-link">Why FINLER?</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Freebies!
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item d-inline-block" href="/emicalc">EMI calculator</a>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="/blogs">Blogs</a>
+          </div>
+        </li>
+      </div>
+
+      <div class="navbar-nav ml-auto">
+        <a href="signup" class="nav-item nav-link">Sign up</a>
+        <a href="login" class="nav-item nav-link">Sign in</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-5 ">
+
+
+
+
+    <div class="view grey lighten-3">
+      <div class="mask">
+        <div class="container h-100">
+
+          <div class="row h-100">
+
+            <div class="col-md-6">
+              <h1 class="mt-1">Now have no worries regarding<span class="text-success ml-2">MONEY!</span></h1> <br>
+              <h5 class="mb-4 pb-10 dark-grey-text">Finler is here to take care of all your worries regarding finance
+                with personalized suggestion to your way!</h5>
+              <a href='/signup' type="button" class="btn btn-light btn-rounded shadow-sm btn-outline-info">Get
+                started</a>
+              <a href='/login' type="button" class="btn btn-light btn-rounded shadow-sm btn-outline-success">Already
+                have an account?</a>
+            </div>
+
+            <div class="col-md-6">
+              <img src="static/images/intro.png" alt="" class="img-fluid">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  </header>
+
+
+  <div id='scroll'>
+
+    <div class="container my-5 py-5 z-depth-1">
+
+
+
+      <section class="text-center px-md-5 mx-md-5 dark-grey-text">
+
+        <h1 class="font-weight-bold">What is FINLER? </h1>
+        <hr>
+
+
+        <div class="row d-flex justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-lg-8">
+
+
+            <div class="row">
+
+              <!--First column-->
+              <div class="col-md-3 col-6 mb-4">
+                <img src='static\images\rupee.png' height='80'>
+              </div>
+
+              <div class="col-md-3 col-6 mb-4">
+                <img src='static\images\track.png' height='80'>
+              </div>
+
+              <div class="col-md-3 col-6 mb-4">
+                <img src='static\images\inv.png' height='80'>
+              </div>
+
+              <div class="col-md-3 col-6 mb-4">
+                <img src='static\images\AI.png' height='80'>
+              </div>
+
+            </div>
+
+
+            <p class='lead'><b class='mr-2 font-weight-bold'>FINLER</b>is an application made for the people who want
+              financial assistance in a progressible
+              manner,so that they can manage their finances efficiently which will be beneficial in crisis times like
+              the one we are facing now!</p>
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+
+
+    </div>
+
+  </div>
+
+
+
+  <div id='features'>
+    <div class="container mt-1">
+
+
+
+      <section class="text-center dark-grey-text">
+
+        <!-- Section heading -->
+        <h2 class="font-weight-bold">Different from others</h2>
+        <hr class="w-header my-4">
+        <!-- Section description -->
+        <p class="text-muted mx-auto mb-5 lead">Being one of its own kind, enables us to establish a sense of trust
+          amongst the users. Which inturn helps us in making it much more easy to serve people.</p>
+        <div class="row text-center d-flex justify-content-center">
+          <div class="col-lg-4 col-md-12">
+            <img src="static/images/expense1.png" class="img-fluid mb-5" height='20' alt="smaple image">
+            <h5 class="font-weight-bold mb-4">Expense Tracker</h5>
+            <p class="text-muted px-2 mb-lg-0">
+              A personalized expense tracker which will help in saving money accordingly.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <img src="static/images/invest.png" class="img-fluid mb-5" alt="smaple image">
+            <h5 class="font-weight-normal mb-4"><b>Investment is the new normal!</b> </h5>
+            <p class="text-muted px-2 mb-lg-0">
+              Money invested is money valued. Suggestions on basis of field chosen for investment.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="">
+              <img src="static/images/risk.jpg" class="img-fluid mb-5" alt="smaple image">
+            </div>
+            <h5 class="font-weight-normal mb-4"><b>Risk Calculaltor</b></h5>
+            <p class="text-muted px-2 mb-md-0">
+              AI-driven suggestions whether to take a financial investment in terms of huge purchases and whether it
+              will prove to be asset or liability in the near future.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+  <div id="about">
+    <div class="container py-5 my-5">
+      <section class="p-md-3 mx-md-5 text-center text-lg-left">
+        <h2 class="text-center font-weight-bold mb-4 pb-1">Our Team</h2>
+        <hr>
+        <p class="text-center lead mb-5 pb-2 text-muted">We are a trio of like minded individuals having an ultimate
+          goal of helping the society</p>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card border shadow-lg">
+              <div class="avatar w-100 white d-flex justify-content-center align-items-center">
+                <img src="static/images/har.jpg" class="img-fluid" />
+              </div>
+              <div class="card-body">
+                <p class="font-weight-bold my-2 lead">Harshit Soni</p>
+                <p class="lead">Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border shadow-lg">
+              <div class="avatar w-100 white d-flex justify-content-center align-items-center">
+                <img src="static/images/montu.jpg" class="img-fluid" />
+              </div>
+              <div class="card-body">
+                <p class="font-weight-bold my-2 lead">Montukeshwar Vaishnav</p>
+                <p class="text-muted lead">Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border shadow-lg">
+              <div class="avatar w-100 white d-flex justify-content-center align-items-center">
+                <img src="static/images/AB1.png" class="img-fluid"/>
+              </div>
+              <div class="card-body">
+                <p class="font-weight-bold my-2 lead">Abhinay Gunjal</p>
+                <p class="text-muted lead">Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="contact">
+      <div class="container z-depth-1 my-5 px-0">
+
+
+        <section class="p-5 my-md-5 text-center"
+          style="background-image: url(static/images/resrarch.png); background-size: cover; ">
+
+          <!-- Section heading -->
+          <h3 class="text-center font-weight-bold mt-5 mb-3">Contact Us</h3>
+          <!-- Section description -->
+          <h4 class="text-center font-weight-normal  mx-auto mb-4 pb-2">We would love to hear from you!</h4>
+
+          <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+            action="https://script.google.com/macros/s/AKfycbxyfIrWe6MZpN8tcK3EIYmitzzRKJAYR6lbQ1PrVeY6F-73wkHx/exec">
+
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <input type="text" id="name" name="name" class="form-control" placeholder="First Name">
+              </div>
+              <div class="col-md-4 mb-4">
+                <input type="text" id="email" name="email" class="form-control" placeholder="Last Name">
+              </div>
+              <div class="col-md-4 mb-4">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone (optional)">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 mb-4">
+              <input id="email" class="form-control" name="email" type="email" value="" required placeholder="example@xyz.com" />
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mb-4">
+                  <textarea class="form-control rounded" id="message" name="message" rows="3"
+                    placeholder="How can we help?"></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-info">Submit</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+        </section>
+
+
+
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+
+
+      <section class="px-md-5 mx-md-5 py-5 text-center white-text  rounded">
+
+        <h3 class="">Made with<i class="fa fa-heart ml-2" style="font-size:30px;color:red"></i></i> by MAH</h3>
+
+      </section>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i
+        class='far fa-arrow-alt-circle-up shadow-lg'></button>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+    <script data-cfasync="false" type="text/javascript" src="contact.js"></script>
+</body>
+
+</html>

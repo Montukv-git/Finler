@@ -1,0 +1,124 @@
+{%load static%}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<div class="container-fluid">
+<div class="row justify-content-center" style="padding-bottom: 20px;">
+        <div class="col-md-5 ml-2 mt-5 border-0 p-5 shadow" style="border-radius: 2%;">
+            <h4 class="text-center font-weight-bold mb-4">Your monthwise report</h4>
+            <canvas id="chBar"></canvas>
+        </div>
+
+    <div class="col-md-5 ml-5 mt-5 border-0 p-5 shadow" style="border-radius: 2%;">
+            <h4 class="text-center font-weight-bold mb-4">Summary report for month of November</h4>
+            <canvas id="pieChart"></canvas>
+        </div>
+</div>
+</div>
+
+
+
+<script>
+
+    // chart colors
+    var colors = ['#46BFBD', '#F7464A'];
+
+    /* bar chart */
+    var chBar = document.getElementById("chBar");
+    if (chBar) {
+        new Chart(chBar, {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+                datasets: [{
+                    data: [17560, 14000, 15000, 2000, 3000],
+                    backgroundColor: colors[0]
+                },
+                {
+                    data: [20000, 23000, 24000, 40000, 38000],
+                    backgroundColor: colors[1]
+                }]
+            },
+            options: {
+                legend: {
+                    display: true
+                },
+                scales: {
+                    xAxes: [{
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    }]
+                }
+            }
+
+        });
+    }
+
+
+
+    /*pie chart*/
+
+    // Data
+    const Savings = 40000;
+    const Expense = 2000;
+
+
+
+    //pie
+    var ctxP = document.getElementById("pieChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+        type: 'pie',
+        data: {
+            labels: ["Credit", "Expense"],
+            datasets: [{
+                data: [Savings, Expense],
+                backgroundColor: ["#46BFBD", "#F7464A"],
+                hoverBackgroundColor: ["#5AD3D1", "#FF5A5E"],
+                borderWidth: 4,
+                borderColor: '#eee'
+            }]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'bottom',
+                labels: {
+                    padding: 20,
+                    boxWidth: 10
+                }
+            },
+            plugins: {
+                datalabels: {
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value * 100 / sum).toFixed(2) + "%";
+                        return percentage;
+                    },
+                    color: 'white',
+                    labels: {
+                        title: {
+                            font: {
+                                size: '10'
+                            }
+                        }
+                    }
+                }
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        return data.labels[tooltipItem.index] + ': ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                    }
+                }
+            }
+        }
+    });
+
+    // Table
+    document.getElementById("cell-Savings").innerHTML = Savings;
+    document.getElementById("cell-Expense").innerHTML = Expense;
+
+
+</script>
