@@ -20,3 +20,4 @@ six==1.11.0
 sqlparse==0.4.1
 virtualenv==20.4.7
 virtualenv-clone==0.5.4
+test
